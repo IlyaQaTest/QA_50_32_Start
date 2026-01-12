@@ -1,0 +1,13 @@
+Home work 1
+1. Посмотреть презентации по HTML и CSS
+2. В проекте QA50_32_start в классe SelectorsCss создать тестовый метод iLcarroTest,
+в методе iLcarroTest сделать все настройки для драйвера и найти несколько WebElements с помощью стратегии
+By.cssSelector("") для buttons in header находящихся на странице https://ilcarro.web.app/search
+3. Кликнуть на кнопки (use method click()) и вернуться на HomePage
+4. Изменения в проекте запушить на GitHub
+6. Выполненное ДЗ прислать на почту telranhomeworks@gmail.com в виде ссылки на свой проект GitHub,
+ в теме письма обязательно указать группу, фамилию и номер ДЗ в формате QA49_Family_HW2
+Удачи )))
+
+Link QA50_32_Start  https://github.com/AlexAksioma/QA_49_Start_1.git
+A fun game to help you learn and practice CSS selectors.
