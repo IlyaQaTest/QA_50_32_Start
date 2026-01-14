@@ -51,6 +51,57 @@ public class SelectorsCss {
         driver.quit();
     }
 
+    @Test
+    public void iLCarroTest() {
+        driver.manage().window().maximize();
+        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        driver.get("https://ilcarro.web.app/search");
+        pause(3);
+        WebElement logoHeader = driver.findElement(By.cssSelector("img[alt='logo']"));
+        logoHeader.click();
+        pause(3);
+        // .navigation-link
+        // a.navigation-link
+        // a[class='navigation-link']
+        // *[class='navigation-link']
+        // [class='navigation-link']
+        WebElement btnSearch = driver.findElement(By.className("navigation-link"));
+        btnSearch.click();
+        pause(3);
+        // a[id='1']
+        // a#1.navigation-link
+        // #1
+        // [id='1']
+//        WebElement btnLetCarWork = driver.findElement(By.cssSelector("a[id='1']"));
+//        btnLetCarWork.click();
+//        pause(3);
+        WebElement btnLetCarWork = driver.findElement(By.linkText("Let the car work"));
+        btnLetCarWork.click();
+        pause(3);
+
+        //a[href*='of-use'] включает
+        //a[href^='of-use'] начинается
+        //a[href$='of-use'] заканчивается
+        //a.navigation-link[href='/terms-of-use']
+
+        WebElement btnTermsOfUse = driver.findElement(By.cssSelector("a[href='/terms-of-use']"));
+        btnTermsOfUse.click();
+        pause(3);
+
+        WebElement btnSingUp = driver.findElement(By.cssSelector("div.header a.navigation-link:nth-child(5)"));
+        btnSingUp.click();
+        pause(3);
+
+        WebElement btnLogin = driver.findElement(By.cssSelector("div.header a.navigation-link:last-child"));
+        btnLogin.click();
+        driver.navigate().to("https://ilcarro.web.app/search");
+        pause(3);
+        driver.quit();
+
+
+    }
+
     static void pause(int time) {
         try {
             Thread.sleep(time * 1000L);
