@@ -52,7 +52,7 @@ public class SelectorsCss {
     }
 
     @Test
-    public void iLCarroTest() {
+    public void iLCarroXpathTest() {
         driver.manage().window().maximize();
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
@@ -98,8 +98,6 @@ public class SelectorsCss {
         driver.navigate().to("https://ilcarro.web.app/search");
         pause(3);
         driver.quit();
-
-
     }
 
     static void pause(int time) {
