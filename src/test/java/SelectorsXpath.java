@@ -51,9 +51,6 @@ public class SelectorsXpath {
                 (By.xpath("//button"));
         System.out.println(buttons);
         System.out.println(buttons.get(1).getText());
-
-
-
     }
 
     @Test
@@ -63,18 +60,25 @@ public class SelectorsXpath {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.navigate().to("https://ilcarro.web.app/search");
         pause(2);
-        WebElement loginLink = driver.findElement(By.xpath("//a[contains(text(),'Log in')]"));
+                 //btnLogin
+        WebElement loginLink = driver.findElement(By.
+                xpath("//a[contains(text(),'Log in')]"));// //a[text()='Login']
         loginLink.click();
         pause(2);
+        // ByclassName"ng-dirty"
+        // Xpath //*[@class='ng-dirty ng-valid ng-touched']
         WebElement emailField = driver.findElement(By.xpath("//input[@id='email']"));
         emailField.clear();
         emailField.sendKeys("bug@bug.bug");
         pause(2);
+                                                                              // //form/div[last()]/input
         WebElement passwordField = driver.findElement(By.xpath("//input[@id='password']"));
         passwordField.clear();
         passwordField.sendKeys("Bug#123^4567");
         pause(2);
+        //  //button[text()='Y'lla'] //button[start-with(text()='Y'lla')]
         WebElement yallaButton = driver.findElement(By.xpath("//button[@type='submit']"));
+                                                                         // //button[@type='submit']//..//.. (//all .dot .dot up in tree )
         yallaButton.click();
         pause(2);
         WebElement okButton = driver.findElement(By.xpath("//button[@class='positive-button ng-star-inserted']"));
@@ -84,6 +88,7 @@ public class SelectorsXpath {
         logoutButton.click();
         pause(2);
         driver.quit();
+
 
     }
     public void pause(int time) {
